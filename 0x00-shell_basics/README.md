@@ -18,3 +18,6 @@ Display current directory contents in a long format with user and group IDs disp
 
 6-firstdirectory script
 Creates a directory named "my_first _directory" in the /tmp/ directory
+
+7-movethatfile script
+Move the file betty from /tmp/ to /tmp/my_first-directory
