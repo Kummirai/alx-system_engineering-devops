@@ -39,3 +39,6 @@ Prints the type of file named iamafile in directory /tmp
 
 13-symbolic_link script
 Creates a symbolic link to /bin/ls named _ls_
+
+14-copy_html
+Script copies all the HTML files from the current working directory to the parent of the working directory ansd only copies files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory
