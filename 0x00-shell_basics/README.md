@@ -36,3 +36,6 @@ List all files (even the ones beginning with a period character,which are normal
 
 12-file_type script
 Prints the type of file named iamafile in directory /tmp
+
+13-symbolic_link script
+Creates a symbolic link to /bin/ls named _ls_
