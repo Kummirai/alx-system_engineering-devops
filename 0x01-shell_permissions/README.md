@@ -36,3 +36,6 @@ Sets the mode of the file hello the same as olleh 'S mode
 
 11-directories_permisions script
 Adds execute permissionto all subdirectories of the current directory for the owner, the group owner and all other users. Regular files are not changed
+
+12-directory_permissions script
+Creates a directory called my_dir with permissions 751 in the working directory
