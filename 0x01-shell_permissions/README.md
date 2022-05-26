@@ -30,3 +30,6 @@ Other users: all the permissions
 
 9-John_Doe script
 Sets the mode of the file hello
+
+10-mirror_permissions
+Sets the mode of the file hello the same as olleh 'S mode
