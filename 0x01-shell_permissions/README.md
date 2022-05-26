@@ -27,3 +27,6 @@ Sets the permission of the file hello as follows
 Owner: no permisssion at all
 Group: no permission at all
 Other users: all the permissions
+
+9-John_Doe script
+Sets the mode of the file hello
