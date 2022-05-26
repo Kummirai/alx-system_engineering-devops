@@ -12,3 +12,6 @@ Changes the owner of the file hello to the user betty
 
 4-empty script
 Creates an empty flie called hello
+
+5-execute script
+Adds execute permisssion to owner of the file hello
