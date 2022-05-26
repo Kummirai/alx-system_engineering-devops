@@ -39,3 +39,6 @@ Adds execute permissionto all subdirectories of the current directory for the ow
 
 12-directory_permissions script
 Creates a directory called my_dir with permissions 751 in the working directory
+
+13-change_group script
+Changes the group owner to school for the file hello
