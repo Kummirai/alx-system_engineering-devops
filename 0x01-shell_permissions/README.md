@@ -15,3 +15,6 @@ Creates an empty flie called hello
 
 5-execute script
 Adds execute permisssion to owner of the file hello
+
+6-multiple_permissions script
+Adds execute permision to owner and the group and read permission to other users, to the file hello
