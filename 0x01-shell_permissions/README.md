@@ -49,6 +49,8 @@ Changes the owner to vincent and the groupowner to staff for all filee and direc
 101-symbolic _link_permissions
 Changes the owner and group owner of _hello to vincent and staff respectively 
 
+102-if_only script
+Chages the owner of the file hello to betty only if it is owned by the user guillaume
 
 
 
