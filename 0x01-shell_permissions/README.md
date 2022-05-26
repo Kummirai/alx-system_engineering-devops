@@ -42,3 +42,23 @@ Creates a directory called my_dir with permissions 751 in the working directory
 
 13-change_group script
 Changes the group owner to school for the file hello
+
+100-change_owner_and_group script
+Changes the owner to vincent and the groupowner to staff for all filee and directories in the working directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
