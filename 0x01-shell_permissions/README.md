@@ -6,3 +6,6 @@ Prints the effective username of the current user
 
 2-groups script
 Prints all the groups the current user is part of
+
+3-new_owner script
+Changes the owner of the file hello to the user betty
