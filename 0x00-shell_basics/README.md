@@ -46,7 +46,8 @@ Script copies all the HTML files from the current working directory to the paren
 100-lets_move script
 Moves all files beginning with an uppercase letter to the directory /tmp/u
 
-
+101-clean_emacs script
+Deletes all files in the current working directory that end with the character ~
 
 
 
