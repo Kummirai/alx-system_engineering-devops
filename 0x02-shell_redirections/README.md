@@ -57,3 +57,7 @@ Words should be sorted
 14-findthatword script
 Display lines containing the pattern “root” from the file /etc/passwd
 
+15-countthatword script
+Display the number of lines that contain the pattern “bin” in the file /etc/passwd
+
+
