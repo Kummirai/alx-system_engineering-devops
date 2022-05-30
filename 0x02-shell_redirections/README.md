@@ -80,3 +80,9 @@ Removes all letters c and C from input
 21-reverse script
 Reverse its input.
 
+22-users_and_homes script
+Write a script that displays all users and their home directories, sorted by users.
+
+Based on the the /etc/passwd file
+
+
