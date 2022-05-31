@@ -13,4 +13,8 @@ Lists environment variables.
 5-local_variables script
 Lists all local variables and environment variables, and functions
 
+6-create_local_variable script
+Create a script that creates a new local variable.
 
+Name: BEST
+Value: School
