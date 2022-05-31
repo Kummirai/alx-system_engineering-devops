@@ -7,6 +7,9 @@ Value: rm *
 1-hello_you script
 Prints hello user, where user is the current Linux user.
 
+2-path script
+Add /action to the PATH. /action should be the last directory the shell looks into when looking for a program.
+
 4-global_variables script
 Lists environment variables.
 
