@@ -10,4 +10,7 @@ Prints hello user, where user is the current Linux user.
 4-global_variables script
 Lists environment variables.
 
+5-local_variables script
+Lists all local variables and environment variables, and functions
+
 
