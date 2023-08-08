@@ -1,24 +1,27 @@
 #!/usr/bin/python3
+"""
+Importing requests module
+"""
 
-import requests
+from requests import get
+
 
 def number_of_subscribers(subreddit):
-
     """
     function that queries the Reddit API and returns the number of subscribers
     (not active users, total subscribers) for a given subreddit.
     """
 
-  headers = {"User-Agent": "Bing"}
-  # Construct the URL for the subreddit's about.json endpoint
-  url = f"https://www.reddit.com/r/{subreddit}/about.json"
-  # Send a GET request and get the response as JSON
-  response = requests.get(url, headers=headers).json()
-  # Check if the response contains data and subscribers keys
-  if "data" in response and "subscribers" in response["data"]:
-    # Return the number of subscribers
-    return response["data"]["subscribers"]
-  else:
-    # Return 0 for invalid subreddits
-    return 0
+    if subreddit is None or not isinstance(subreddit, str):
+        return 0
 
+    user_agent = {'User-agent': 'Google Chrome Version 81.0.4044.129'}
+    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
+    response = get(url, headers=user_agent)
+    all_data = response.json()
+
+    try:
+        return all_data.get('data').get('subscribers')
+
+    except:
+        return 0
