@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-"""
-Gathering information from an API
-"""
-import requests
+""" Python script that uses REST API to returns information about a given
+employee's TODO list progress """
+from requests import get
 from sys import argv
 
 
+def get_todos(employee_id):
+    """ Uses get to pull todo tasks of passed in employee_id """
+    users = get("https://jsonplaceholder.typicode.com/users/" +
+                employee_id).json()
+    todos = get("https://jsonplaceholder.typicode.com/todos?userId=" +
+                employee_id).json()
+    if not users or not todos:
+        return ("Not a valid JSON")
+    name = users.get('name')
+    completed = [task.get('title') for task in todos if task.get('completed')]
+    total_tasks_count = len(todos)
+    completed_count = len(completed)
+    print("Employee {} is done with tasks({}/{}):".format(name,
+                                                          completed_count,
+                                                          total_tasks_count))
+    for t in completed:
+        print("\t {}".format(t))
+
+
 if __name__ == "__main__":
-    Base_url = 'https://jsonplaceholder.typicode.com'
-    """REST API url"""
-
-    user = requests.get('{}/users/{}'.format(Base_url, argv[1])).json()
-    todos = requests.get('\
-            {}/todos'.format(Base_url), params={'userId': argv[1]}).json()
-
-    total_tasks = len(todos)
-    completed = 0
-    completed_tasks = []
-
-    for todo in todos:
-        if todo['completed']:
-            completed += 1
-            completed_tasks.append(todo["title"])
-    output = 'Employee {} is done with tasks \
-            ({}/{}): '.format(user["name"], completed, total_tasks)
-
-    print(output)
-    for task in completed_tasks:
-        print('\t {}'.format(task))
+    if len(argv) > 1:
+        get_todos(argv[1])
