@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """ Extends task 1 to export data in the CSV information """
 from requests import get
 from sys import argv
