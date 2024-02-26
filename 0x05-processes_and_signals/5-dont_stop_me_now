@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that stops 4-to_infinity_and_beyond process.
+# is portable: will work if either script is called from another directory
+kill "$(pgrep -f ./4-to_infinity_and_beyond)"
