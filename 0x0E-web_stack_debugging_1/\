@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Check if Nginx is installed
+if ! command -v nginx &>/dev/null; then
+    echo "Nginx is not installed. Please install it."
+    exit 1
+fi
+
+# Check if Nginx is already running
+if sudo systemctl is-active --quiet nginx; then
+    echo "Nginx is already running."
+else
+    # Start Nginx
+    sudo systemctl start nginx
+    echo "Nginx started."
+fi
+
+# Check if Nginx is listening on port 80
+if sudo netstat -tuln | grep -q ':80 '; then
+    echo "Nginx is listening on port 80."
+else
+    echo "Configuring Nginx to listen on port 80..."
+    # Modify Nginx configuration as needed
+    # (e.g., remove mail-related settings)
+    # Restart Nginx afterward
+    sudo systemctl restart nginx
+fi
+
+# Check firewall rules
+if sudo iptables -L INPUT -n | grep -q 'dpt:80'; then
+    echo "Firewall allows traffic on port 80."
+else
+    echo "Opening port 80 in the firewall..."
+    sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    sudo iptables-save > /etc/iptables/rules.v4
+fi
+
+echo "Configuration complete!"

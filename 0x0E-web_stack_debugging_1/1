@@ -1,2 +1,1 @@
-ln: failed to create symbolic link '/etc/nginx/sites-enabled/default': No such file or directory
-nginx: unrecognized service
+Nginx is not installed. Please install it.
