@@ -17,9 +17,7 @@ def get_todos(employee_id):
     completed = [task.get('title') for task in todos if task.get('completed')]
     total_tasks_count = len(todos)
     completed_count = len(completed)
-    print("Employee {} is done with tasks({}/{}):".format(name,
-                                                          completed_count,
-                                                          total_tasks_count))
+    print("Employee {} is done with tasks({}/{}):".format(name,completed_count,total_tasks_count))
     for t in completed:
         print("\t {}".format(t))
 
