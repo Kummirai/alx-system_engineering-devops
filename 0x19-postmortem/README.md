@@ -55,5 +55,3 @@ file { '/var/www/html/.htaccess':
 This incident highlighted the need for rigorous configuration management and the benefits of infrastructure automation. By transitioning to Puppet, we have increased our ability to manage configurations consistently and reduced the risk of human error.
 
 ---
-
-This fictional postmortem assumes a scenario where a technical issue was resolved and then automated using Puppet. It serves as an example of how to document an incident, analyze the root cause, and implement measures to prevent future occurrences.
